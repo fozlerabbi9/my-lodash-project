@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Luxurious+Roman&family=Playfair+Display&family=Poppins:wght@500&family=Roboto:wght@400;500&display=swap');  /*===> Roboto <===*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Luxurious+Roman&family=Open+Sans:wght@400;500&family=Playfair+Display&family=Poppins:wght@500&family=Roboto:wght@400;500&display=swap');  /*=====> Open Sans <=====*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*=======> Common code <======*/
+:root{
+    --roboto-font: 'Roboto', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+.main{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(235, 247, 245);
+    box-sizing: border-box;
+}
+.section-one{
+    width: 100%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+
+.section-one header nav .logo{
+    /* font-family: var(--roboto-font); */
+    font-weight: 500;
+    color: black;
+}
+nav{
+    /* background-color: rgba(5, 24, 237,0.8); */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    align-items: center;
+    box-shadow: 3px 3px 20px rgb(173, 170, 170);
+    margin-top: 10px;
+    border: 1px solid rgb(233, 225, 225);
+    outline: 3px solid rgb(251, 244, 252);
+    outline-offset: -6px;
+}
+nav > ul{
+    display: flex;
+}
+nav > ul li{
+    list-style-type: none;
+    margin: 13px 10px;
+    /* background-color: violet; */
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav > ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 19px;
+    /* font-family: var(--roboto-font); */
+    position: relative;
+}
+nav > ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+nav > ul li:hover a::after{
+    width: 100%;
+}
+
+nav > ul li .sub-menu{
+    display: none;
+    /* display: block; */
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.2);
+    box-shadow: 5px 5px 8px gray;
+
+}
+nav > ul li .sub-menu ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav > ul li .sub-menu ul li{
+    width: 100%;
+    margin: 2px 0;
+}
+nav > ul li .sub-menu ul li:first-child{
+    margin-top: 10px;
+}
+nav > ul li .sub-menu ul li:last-child{
+    margin-bottom: 10px;
+}
+nav > ul li .sub-menu ul li a{
+    color: rgb(70, 50, 116);
+    font-size: 20px;
+    transition: 0.5s;
+}
+nav > ul li .sub-menu ul li a:hover{
+    color: blue;
+}
+nav > ul li .sub-menu ul li a::after{
+    width: 0;
+}
+nav > ul li:hover .sub-menu{
+    display: block;
+}
